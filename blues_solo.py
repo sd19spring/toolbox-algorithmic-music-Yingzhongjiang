@@ -34,10 +34,12 @@ def stop():
     synthServer.client.send(msg)
 
 
-atexit.register(stop)  # stop all tracks when the program exits normally or is interrupted
+# stop all tracks when the program exits normally or is interrupted
+atexit.register(stop)
 
 # These are the piano key numbers for a 3-octave blues scale in A. See: http://en.wikipedia.org/wiki/Blues_scale
-blues_scale = [40, 43, 45, 46, 47, 50, 52, 55, 57, 58, 59, 62, 64, 67, 69, 70, 71, 74, 76]
+blues_scale = [
+    40, 43, 45, 46, 47, 50, 52, 55, 57, 58, 59, 62, 64, 67, 69, 70, 71, 74, 76]
 beats_per_minute = 45				# Let's make a slow blues solo
 
 play_note(blues_scale[0], beats=1, bpm=beats_per_minute)
