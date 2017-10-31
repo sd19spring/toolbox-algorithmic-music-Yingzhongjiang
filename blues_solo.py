@@ -31,7 +31,7 @@ def stop():
     msg = osc_message_builder.OscMessageBuilder(address='/stop-all-jobs')
     msg.add_arg('SONIC_PI_PYTHON')
     msg = msg.build()
-    synthServer.client.send(msg)
+    synth_server.client.send(msg)
 
 
 # stop all tracks when the program exits normally or is interrupted
